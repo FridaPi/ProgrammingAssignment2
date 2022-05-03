@@ -4,7 +4,7 @@
 
 ## creates a special matrix to store the matrix inverse
 
-makeCacheMatrix <- function(x = matrix()) {
+makematrix <- function(x = matrix()) {
         mi <- NULL 
         set <- function(y) {
                 x <<- y
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## This function checks to see if the inverse has been calculated and if so, grabs it from the cache.
 ## If the inverse is not availble in the cache, the inverse is calculated
 
-cacheSolve <- function(x, ...) {
+cacheinverse <- function(x, ...) {
         mi <- x$getinverse()
         if (!is.null(mi)) {
                 message("getting cached data")
@@ -35,5 +35,5 @@ cacheSolve <- function(x, ...) {
         
 }
 B<-matrix(c(1:4),2,2)
-B1<-makeCacheMatrix(B)
-cacheSolve(B1)
+B1<-makematrix(B)
+cacheinverse(B1)
